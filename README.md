@@ -9,6 +9,10 @@ The most important difference to note in this shader are:
 - The UV's will scale so the textures are applied as you would expect any other 3D object to behave.
 - It adds an example use case script for simulating 3D cards in a 2D card game.
 
+## EFFECT
+
+![Effect Demo](./github-assets/example_effect.gif)
+
 ## USAGE
 
 See the EXAMPLE PROJECT on GitHub, or the below example script that uses this shader for simulating 3D cards in a 2D card game, so we can use Controls like the HBoxContainer to organise the layout of our cards
