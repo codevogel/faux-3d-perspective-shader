@@ -1,0 +1,12 @@
+config_version=5
+
+[application]
+
+config/name="faux-3d-perspective-shader-example"
+run/main_scene="uid://p1aj6pp6hm1m"
+config/features=PackedStringArray("4.5", "Mobile")
+config/icon="res://icon.svg"
+
+[rendering]
+
+renderer/rendering_method="mobile"

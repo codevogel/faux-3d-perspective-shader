@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://p1aj6pp6hm1m"]
+
+[ext_resource type="Script" uid="uid://8tkettwuhqpa" path="res://example/card_art.gd" id="1_lthvp"]
+[ext_resource type="Material" uid="uid://bx4tq5siv02s" path="res://example/mat/card_flip_shader_material.tres" id="1_sacvy"]
+[ext_resource type="Texture2D" uid="uid://dtp0ai55duxpp" path="res://example/tex/card_front.png" id="3_46she"]
+[ext_resource type="Texture2D" uid="uid://d0cdfxs15e68h" path="res://example/tex/card_back.png" id="4_yp4v4"]
+
+[node name="Control" type="TextureRect"]
+material = ExtResource("1_sacvy")
+anchors_preset = -1
+anchor_top = -0.17901234
+anchor_right = 0.5625
+anchor_bottom = 1.1790123
+offset_top = 116.0
+offset_bottom = -116.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture = ExtResource("3_46she")
+script = ExtResource("1_lthvp")
+front_art = ExtResource("3_46she")
+back_art = ExtResource("4_yp4v4")
+metadata/_custom_type_script = "uid://8tkettwuhqpa"
+metadata/_edit_use_anchors_ = true
