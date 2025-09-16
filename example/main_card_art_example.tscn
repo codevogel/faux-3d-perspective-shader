@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b0rid2qwtx5o0"]
 
 [ext_resource type="Script" uid="uid://8tkettwuhqpa" path="res://example/card_art.gd" id="1_lthvp"]
-[ext_resource type="Material" uid="uid://bx4tq5siv02s" path="res://example/mat/card_flip_shader_material.tres" id="1_sacvy"]
+[ext_resource type="Material" uid="uid://bx4tq5siv02s" path="res://example/mat/faux_3d_perspective_shader_material.tres" id="1_sacvy"]
 [ext_resource type="Texture2D" uid="uid://dtp0ai55duxpp" path="res://example/tex/card_front.png" id="3_46she"]
 [ext_resource type="Texture2D" uid="uid://d0cdfxs15e68h" path="res://example/tex/card_back.png" id="4_yp4v4"]
 

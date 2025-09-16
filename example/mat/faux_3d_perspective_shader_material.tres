@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bx4tq5siv02s"]
 
-[ext_resource type="Shader" uid="uid://ntdia0oslfb1" path="res://example/shader/card_flip_shader.gdshader" id="1_uilq5"]
+[ext_resource type="Shader" uid="uid://ntdia0oslfb1" path="res://example/shader/faux_3d_perspective_shader.gdshader" id="1_uilq5"]
 
 [resource]
 shader = ExtResource("1_uilq5")
