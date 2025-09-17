@@ -3,10 +3,11 @@
 [ext_resource type="Shader" uid="uid://ntdia0oslfb1" path="res://example/shader/faux_3d_perspective_shader.gdshader" id="1_uilq5"]
 
 [resource]
+resource_local_to_scene = true
 shader = ExtResource("1_uilq5")
-shader_parameter/cull_backface = true
-shader_parameter/use_front = false
-shader_parameter/fov = 60.0000028025
+shader_parameter/cull_backface = false
+shader_parameter/use_front = true
+shader_parameter/fov = 60.0
 shader_parameter/rot_y_deg = 0.0
 shader_parameter/rot_x_deg = 0.0
 shader_parameter/inset = 0.0

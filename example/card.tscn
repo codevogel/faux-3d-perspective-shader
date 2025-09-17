@@ -1,0 +1,100 @@
+[gd_scene load_steps=8 format=3 uid="uid://bt1rb2nd40bwl"]
+
+[ext_resource type="Material" uid="uid://bx4tq5siv02s" path="res://example/mat/faux_3d_perspective_shader_material.tres" id="1_oc7ne"]
+[ext_resource type="Script" uid="uid://8tkettwuhqpa" path="res://example/card.gd" id="2_spsmi"]
+[ext_resource type="Texture2D" uid="uid://d0cdfxs15e68h" path="res://example/tex/card_front.png" id="3_vxdf8"]
+[ext_resource type="FontFile" uid="uid://56lycnmks31d" path="res://example/font/LiberationSans-Regular.ttf" id="4_tukho"]
+[ext_resource type="Texture2D" uid="uid://dtbqyp2kasq03" path="res://icon.svg" id="5_5pd5c"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kikvd"]
+line_spacing = 0.0
+font = ExtResource("4_tukho")
+font_size = 80
+
+[sub_resource type="LabelSettings" id="LabelSettings_rjlel"]
+font = ExtResource("4_tukho")
+font_size = 70
+
+[node name="Card" type="SubViewportContainer"]
+material = ExtResource("1_oc7ne")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -700.0
+offset_right = 500.0
+offset_bottom = 700.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+stretch = true
+script = ExtResource("2_spsmi")
+rotation_y = 6.0
+rotation_x = 2.0
+metadata/_custom_type_script = "uid://8tkettwuhqpa"
+
+[node name="SubViewport" type="SubViewport" parent="."]
+handle_input_locally = false
+size = Vector2i(1000, 1400)
+size_2d_override = Vector2i(1000, 1400)
+size_2d_override_stretch = true
+render_target_update_mode = 4
+
+[node name="ArtTextureRect" type="TextureRect" parent="SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_vxdf8")
+
+[node name="CardContents" type="Control" parent="SubViewport"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="SubViewport/CardContents"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 75
+theme_override_constants/margin_top = 75
+theme_override_constants/margin_right = 75
+theme_override_constants/margin_bottom = 75
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SubViewport/CardContents/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="CardNameLabel" type="Label" parent="SubViewport/CardContents/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Example Card Name"
+label_settings = SubResource("LabelSettings_kikvd")
+
+[node name="IconTextureRect" type="TextureRect" parent="SubViewport/CardContents/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 600)
+layout_mode = 2
+texture = ExtResource("5_5pd5c")
+
+[node name="DescriptionLabel" type="Label" parent="SubViewport/CardContents/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Example Card Description.
+This explains what the card does."
+label_settings = SubResource("LabelSettings_rjlel")
+autowrap_mode = 2

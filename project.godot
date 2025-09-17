@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="faux-3d-perspective-shader-example"
-run/main_scene="uid://b0rid2qwtx5o0"
+run/main_scene="uid://mscvyeokhpba"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
@@ -19,6 +19,9 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=4
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [rendering]
 

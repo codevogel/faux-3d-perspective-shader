@@ -1,0 +1,103 @@
+[gd_scene load_steps=9 format=3 uid="uid://bt07qpmeifqrq"]
+
+[ext_resource type="Script" uid="uid://bh28e6yvx8cml" path="res://example/demo/gui.gd" id="1_6lon5"]
+[ext_resource type="PackedScene" uid="uid://bt1rb2nd40bwl" path="res://example/card.tscn" id="1_80edf"]
+[ext_resource type="Shader" uid="uid://ntdia0oslfb1" path="res://example/shader/faux_3d_perspective_shader.gdshader" id="3_q8o8l"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cor1f"]
+resource_local_to_scene = true
+shader = ExtResource("3_q8o8l")
+shader_parameter/cull_backface = false
+shader_parameter/use_front = true
+shader_parameter/fov = 60.0
+shader_parameter/rot_y_deg = 0.0
+shader_parameter/rot_x_deg = 0.0
+shader_parameter/inset = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u77ya"]
+resource_local_to_scene = true
+shader = ExtResource("3_q8o8l")
+shader_parameter/cull_backface = false
+shader_parameter/use_front = true
+shader_parameter/fov = 60.0
+shader_parameter/rot_y_deg = 0.0
+shader_parameter/rot_x_deg = 0.0
+shader_parameter/inset = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jf511"]
+resource_local_to_scene = true
+shader = ExtResource("3_q8o8l")
+shader_parameter/cull_backface = false
+shader_parameter/use_front = true
+shader_parameter/fov = 60.0
+shader_parameter/rot_y_deg = 0.0
+shader_parameter/rot_x_deg = 0.0
+shader_parameter/inset = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0wv8u"]
+resource_local_to_scene = true
+shader = ExtResource("3_q8o8l")
+shader_parameter/cull_backface = false
+shader_parameter/use_front = true
+shader_parameter/fov = 60.0
+shader_parameter/rot_y_deg = 0.0
+shader_parameter/rot_x_deg = 0.0
+shader_parameter/inset = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_67jta"]
+resource_local_to_scene = true
+shader = ExtResource("3_q8o8l")
+shader_parameter/cull_backface = false
+shader_parameter/use_front = true
+shader_parameter/fov = 60.0
+shader_parameter/rot_y_deg = 0.0
+shader_parameter/rot_x_deg = 0.0
+shader_parameter/inset = 0.0
+
+[node name="GUI" type="CanvasLayer"]
+script = ExtResource("1_6lon5")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_constants/separation = 150
+
+[node name="Card" parent="MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("1_80edf")]
+material = SubResource("ShaderMaterial_cor1f")
+custom_minimum_size = Vector2(174, 243.6)
+layout_mode = 2
+
+[node name="Card2" parent="MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("1_80edf")]
+material = SubResource("ShaderMaterial_u77ya")
+custom_minimum_size = Vector2(174, 243.6)
+layout_mode = 2
+
+[node name="Card3" parent="MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("1_80edf")]
+material = SubResource("ShaderMaterial_jf511")
+custom_minimum_size = Vector2(174, 243.6)
+layout_mode = 2
+
+[node name="Card4" parent="MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("1_80edf")]
+material = SubResource("ShaderMaterial_0wv8u")
+custom_minimum_size = Vector2(174, 243.6)
+layout_mode = 2
+
+[node name="Card5" parent="MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("1_80edf")]
+material = SubResource("ShaderMaterial_67jta")
+custom_minimum_size = Vector2(174, 243.6)
+layout_mode = 2
