@@ -1,5 +1,7 @@
 # Faux 3D Perspective Shader for 2D Canvas Items in Godot
 
+(originally released on [Godot Shaders](https://godotshaders.com/shader/faux-3d-perspective-shader-for-2d-canvas-items/))
+
 ## WHAT IS IT?
 An improvement on [Hei's 2d-perspective shader](https://godotshaders.com/shader/2d-perspective/).
 
@@ -23,7 +25,7 @@ See the EXAMPLE PROJECT on GitHub, or the below example script that uses this sh
 4. Attach the example script below to the TextureRect node.
 5. Assign the front and back textures to the script's exported properties.
 
-```
+```gdscript
 # An example of a simulating a 3D card with a 2D TextureRect
 # using the Faux 3D Perspective shader by CodeVogel (https://github.com/codevogel/faux-3d-perspective-shader-godot)
 @tool
